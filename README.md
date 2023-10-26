@@ -13,13 +13,39 @@ HashiCorp Configuration Language, basicamente a linguagem utilizada para declara
 É o bloco que se conecta com o provider, segue doc de todos os providers do terraform:
 https://registry.terraform.io/browse/providers
 #### bloco resource
-É o bloco onde nós declaramos os recursos que se deseja provisionar.
+É o bloco onde nós declaramos os recursos    que se deseja provisionar.
 Para acessar um valor de um resource:
 
     tipo.nome.algum_output
 
 #### Variables
+O bloco de varíaveis é mais basicamente dessa forma:
+
+    variable "nome_varivel" {
+    type        = "descrever o tipo de variável, como string, number e etc"
+    default     = "Estipula um valor padrão que é fixo, e sempre deve ser passado"
+    }
+
 #### Output
+O Outoput na maioria das vezes ele é usado apenas apra retornar ao usuário algum valor, mensagem ou texto, ao falar de modulos, é que ele tem algumas funçṍes a mais, a principio, ele só obriga que seja declarado um valor.
+    
+    output "nome_output" {
+        value = "valor que quer mostrar no output, podendo ser um resource, modulo ou variável"
+    }
+
+#### data
+Mantém os dados de forma fixa para serem utilizados em outros locais
+
+    data "tipo de provider" "nome" {
+        //inputs
+    }
+#### module
+Literalmente é o bloco que junta todos os outros em um modulo fechado e pode ser reutilizado e até mesmo "transportado".
+
+    module "nome" {
+        source = "caminho/para/o/modulo"
+        //inputs
+    }
 
 * binário
 * state
