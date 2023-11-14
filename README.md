@@ -19,12 +19,29 @@ Para acessar um valor de um resource:
     tipo.nome.algum_output
 
 #### Variables
-O bloco de varíaveis é mais basicamente dessa forma:
+O bloco de varíaveis é basicamente dessa forma:
 
     variable "nome_varivel" {
     type        = "descrever o tipo de variável, como string, number e etc"
     default     = "Estipula um valor padrão que é fixo, e sempre deve ser passado"
+    description = "Opcional, para descrever a variável".
     }
+
+Types:
+* string
+* number
+* bool
+
+Default:
+Tem uma variável opcional com um valor fixado, se não utilizar o Default, o user é orbigado a passar um valor para essa variável.
+
+Para acessar uma variável no Terraform, não é muito diferente de outras linguagens:
+    
+    var.nomedavariavel
+
+
+
+
 
 #### Output
 O Outoput na maioria das vezes ele é usado apenas apra retornar ao usuário algum valor, mensagem ou texto, ao falar de modulos, é que ele tem algumas funçṍes a mais, a principio, ele só obriga que seja declarado um valor.
