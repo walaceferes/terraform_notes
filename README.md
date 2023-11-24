@@ -69,6 +69,6 @@ Literalmente é o bloco que junta todos os outros em um modulo fechado e pode se
 
 ## Comandos
 
-
+kjhdfkjsafkjhfk
 
 #### terraform init
