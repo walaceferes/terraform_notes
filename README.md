@@ -66,3 +66,10 @@ Literalmente é o bloco que junta todos os outros em um modulo fechado e pode se
 
 * binário
 * state
+
+## Comandos
+
+#### terraform init
+A principio, esse é o primeiro comando a ser executado após a criação de uma estrutura em terrraform ou após clonar uma. O mesmo é responsável por baixar dependencias como plugins e modulos solicitados,criação de um diretório de trablho contendo diversos arquivos relevantes para para o funcionamento correto do Terraform(contendo versões e etc). O comando também inicializa o backend do terraform, que é responsável por armazenar o estado da infraestrutura gerenciada pelo Terraform.
+
+    terraform init
